@@ -11,7 +11,10 @@
 
   <!-- External Files -->
   <link rel="stylesheet" href="Exo.css">
+  
   <script src="Exo.js" defer></script>
+
+  
 </head>
 
 <body>
@@ -29,6 +32,33 @@
     </ul>
 
 </nav>
+
+<form action="add_student.php" method="post">
+  <label>Student ID:</label>
+  <input type="text" name="student_id" required><br><br>
+
+  <label>Name:</label>
+  <input type="text" name="name" required><br><br>
+
+  <label>Group:</label>
+  <input type="text" name="group" required><br><br>
+
+  <input type="submit" value="Add Student">
+</form>
+
+<!-- Exercise 6 -->
+<button id="highlightExcellent" class="extra-btn">Highlight Excellent Students</button>
+<button id="resetColors" class="extra-btn">Reset Colors</button>
+
+<br><br>
+
+<!-- Exercise 7 -->
+<input type="text" id="searchName" placeholder="Search by Name" />
+
+<button id="sortAbsences" class="extra-btn">Sort by Absences (Ascending)</button>
+<button id="sortParticipation" class="extra-btn">Sort by Participation (Descending)</button>
+
+<p id="sortStatus"></p>
 
   <div class="container">
     <h1>Attendance — 6 Sessions</h1>
@@ -113,5 +143,4 @@
       <canvas id="myChart"></canvas>
     </div>
   </div>
-</body>
-</html>
+

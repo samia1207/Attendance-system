@@ -1,0 +1,37 @@
+/* == Mobile First === */
+
+.btn {
+  margin-top: 20px;
+  width: 100%;                 
+  padding: 12px;
+  background-color: #4a6fa5;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.btn:hover {
+  background-color: #3c5e8b;
+}
+
+/* Report Section */
+#reportSection {
+  margin-top: 25px;
+  text-align: center;
+}
+
+/* Chart */
+#myChart {
+  max-width: 100%;
+  margin: 15px auto;
+}
+@media (min-width: 1024px) {
+  .btn {
+    margin-top: 105px;        
+    margin-left: 200px;
+    padding: 30px 60px;
+    font-size: 16px;
+  }
+}

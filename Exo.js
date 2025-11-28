@@ -1,4 +1,4 @@
-// Function to update absences and highlight
+// function to update absences and highlight
   function updateAbsences() {
     document.querySelectorAll("#attendanceTable tbody tr").forEach(row => {
       const boxes = row.querySelectorAll("input[type='checkbox']");
@@ -11,7 +11,7 @@
 
       row.querySelector("td:last-child").textContent = abs;
 
-      // Apply color based on absences
+      // apply color based on absences
       if (abs > 4) {
         row.style.backgroundColor = "#ffb3b3"; // red
       } else if (abs === 4) {
@@ -22,21 +22,21 @@
     });
   }
 
-  // Run at start
+  // run at start
   updateAbsences();
 
-  // When checkbox changes
+  // when checkbox changes
   document.querySelector("#attendanceTable").addEventListener("change", e => {
     if (e.target.type === "checkbox") {
       updateAbsences();
     }
   });
 
-  // Add student + validation
+  // add student + validation
 document.getElementById("addStudentForm").addEventListener("submit", function(e){
   e.preventDefault();
 
-  // Get input elements first 
+  // get input elements first 
   const studentId = document.getElementById("studentId");
   const lastName = document.getElementById("lastName");
   const firstName = document.getElementById("firstName");
@@ -53,7 +53,7 @@ document.getElementById("addStudentForm").addEventListener("submit", function(e)
   let mail = email.value.trim();
   let valid = true;
 
-  // Clear previous errors
+  // clear previous errors
   document.querySelectorAll(".error").forEach(e => e.textContent = "");
 
   if(id==="" || !/^[0-9]+$/.test(id)){
@@ -70,12 +70,12 @@ document.getElementById("addStudentForm").addEventListener("submit", function(e)
   }
   if(!valid) return;
 
-  // Add new row
+  // add new row
   const tbody = document.querySelector("#attendanceTable tbody");
   const row = document.createElement("tr");
   row.innerHTML = `
     <td>${id}</td><td>${last}</td><td>${first}</td>
-    ${Array(8).fill('<td><input type="checkbox"></td>').join("")}
+    ${Array(12).fill('<td><input type="checkbox"></td>').join("")}
     <td class="center">0</td>
   `;
   tbody.appendChild(row);
@@ -110,4 +110,50 @@ document.getElementById("addStudentForm").addEventListener("submit", function(e)
       }
     });
   });
+
+// EXo 6 --
+
+
+// highlight students with absences < 3
+$("#highlightExcellent").click(function () {
+    $("#attendanceTable tbody tr").each(function () {
+        let abs = parseInt($(this).find("td:last").text());
+
+        if (abs < 3) {
+            $(this)
+                .animate({ opacity: 0.5 }, 300)
+                .animate({ opacity: 1 }, 300)
+                .css("background-color", "lightgreen");
+        }
+    });
+});
+
+// Reset colors to default
+$("#resetColors").click(function () {
+    $("#attendanceTable tbody tr").css({
+        "background-color": "",
+        "opacity": "1"
+    });
+});
+
+
+
+// EXo 7 
+
+$("#sortAbsences").click(function () {
+    let rows = $("#attendanceTable tbody tr").get();
+
+    rows.sort(function (a, b) {
+        let A = parseInt($(a).find("td:last").text());
+        let B = parseInt($(b).find("td:last").text());
+
+        
+        if (isNaN(A)) A = 0;
+        if (isNaN(B)) B = 0;
+
+        return A - B; 
+    });
+
+    $("#attendanceTable tbody").empty().append(rows);
+});
 

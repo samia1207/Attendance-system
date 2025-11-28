@@ -1,0 +1,102 @@
+/* ======== Table Responsive (Mobile First) ======== */
+.table-container {
+  width: 100%;
+  overflow-x: auto;   
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+  margin-top: 15px;
+  font-size: 12px;   }
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 6px;
+  white-space: nowrap; 
+}
+
+th {
+  background-color: #e9eef5;
+  font-size: 12px;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f6fa;
+}
+
+input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+.center {
+  text-align: center;
+}
+
+/* ===== Desktop Screens ===== */
+@media (min-width: 768px) {
+
+  table {
+    font-size: 14px;   
+  }
+
+  th, td {
+    padding: 10px;
+  }
+
+  input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+  }
+
+}
+/* ======== Exercise 6 + 7 Buttons ======== */
+.extra-btn {
+  padding: 10px 15px;
+  background-color: #4a6fa5;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  margin: 8px 5px;
+  transition: 0.3s ease;
+}
+
+.extra-btn:hover {
+  background-color: #3c5e8b;
+}
+
+/* Search Input */
+#searchName {
+  width: 100%;
+  max-width: 350px;
+  padding: 8px;
+  margin: 15px 0;
+  font-size: 14px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+/* Sort status message */
+#sortStatus {
+  margin-top: 15px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #2c3e50;
+  text-align: center;
+}
+
+/* Highlighted rows */
+
+#attendanceTable tbody tr:hover {
+  background-color: #dbeafe;
+  cursor: pointer;
+  transition: 0.2s ease;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transform: scale(1.01);
+}
+

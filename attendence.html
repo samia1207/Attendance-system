@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="attendence.css">
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+  <!--navbar -->
+
+  <nav class="nav"> <!--ykon fiha kaml l bar -->
+<img src="img/Group.png" alt="">
+<div class="logo ">StudAdd</div>
+    <ul class="links">
+<li> <a href="home.html">home</a></li>
+<li> <a href="attendence.php">Attendance list</a></li>
+<li> <a href="add_student.php">add Student</a></li>
+<li> <a href="rapport.html">rapport</a></li>
+<li> <a href="home.html">logout</a></li>
+<button>log in </button>
+<button> sign in </button>
+
+    </ul>
+
+</nav>
+    <h1>Attendence Table</h1>
+<!-- Responsive Table -->
+    <div class="table-container">
+      <table id="attendanceTable">
+        <thead>
+          <tr>
+            <th rowspan="2">Student ID</th>
+            <th rowspan="2">Last Name</th>
+            <th rowspan="2">First Name</th>
+            <th colspan="2">Session 1</th>
+            <th colspan="2">Session 2</th>
+            <th colspan="2">Session 3</th>
+            <th colspan="2">Session 4</th>
+            <th colspan="2">Session 5</th>
+            <th colspan="2">Session 6</th>
+            <th rowspan="2">Absences</th>
+          </tr>
+          <tr>
+            <th>Present</th><th>Participated</th>
+            <th>Present</th><th>Participated</th>
+            <th>Present</th><th>Participated</th>
+            <th>Present</th><th>Participated</th>
+            <th>Present</th><th>Participated</th>
+            <th>Present</th><th>Participated</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>20251001</td><td>Lagder</td><td>Samia</td>
+            <td><input type="checkbox" checked></td><td><input type="checkbox"></td>
+            <td><input type="checkbox"></td><td><input type="checkbox"></td>
+            <td><input type="checkbox"></td><td><input type="checkbox"></td>
+            <td><input type="checkbox"></td><td><input type="checkbox"></td>
+            <td><input type="checkbox"></td><td><input type="checkbox"></td>
+            <td><input type="checkbox"></td><td><input type="checkbox"></td>
+            <td class="center">0</td>
+          </tr>
+          <tr>
+            <td>20251055</td><td>Lagder1</td><td>Sara</td>
+            <td><input type="checkbox" checked></td><td><input type="checkbox"></td>
+            <td><input type="checkbox"></td><td><input type="checkbox"></td>
+            <td><input type="checkbox"></td><td><input type="checkbox"></td>
+            <td><input type="checkbox"></td><td><input type="checkbox"></td>
+            <td><input type="checkbox"></td><td><input type="checkbox"></td>
+            <td><input type="checkbox"></td><td><input type="checkbox"></td>
+            <td class="center">0</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+
+
+<script src="attendence.js"></script>
+</body>
+</html>

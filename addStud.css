@@ -1,0 +1,70 @@
+/* ======== Mobile First : Form Styling ======== */
+
+/* Form */
+form {
+  margin-top: 15px;        
+  background: #54699A;
+  padding: 12px;
+  border-radius: 8px;
+}
+
+/* Title */
+h2 {
+  text-align: center;
+  color: #2c3e50;
+  font-size: 18px;       
+}
+
+/* Labels */
+label {
+  display: block;
+  margin-top: 8px;
+  font-size: 13px;
+  color: white;
+}
+
+/* Inputs */
+input[type="text"],
+input[type="email"],
+input[type="submit"] {
+  width: 100%;
+  padding: 7px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 13px;
+}
+
+/* Button */
+.btn {
+  width: 100%;            
+  margin-top: 12px;
+  padding: 10px;
+  background-color: #e3e9f0;
+  color: rgb(6, 5, 5);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.btn:hover {
+  background-color: #3c5e8b;
+}
+
+/* Error message */
+.error {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+}
+@media (min-width: 1024px) {
+  form {
+    width: 60%;
+    margin: 25px auto;   
+  }
+
+  h2 {
+    font-size: 22px;
+  }
+}

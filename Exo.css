@@ -1,7 +1,7 @@
 /* ======== Base (Mobile First) ======== */
 body {
   font-family: Arial, sans-serif;
-  background-color: #f7f9fc;
+  background-color: #8D8585;
   color: #333;
   margin: 0;
   padding: 10px;
@@ -10,7 +10,7 @@ body {
 .container {
   max-width: 100%;
   margin: auto;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.359);
   padding: 15px;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
@@ -20,43 +20,6 @@ h1 {
   text-align: center;
   color: #2c3e50;
   font-size: 1.4rem;
-}
-
-/* ======== Table Responsive ======== */
-.table-container {
-  overflow-x: auto; /* scroll horizontal for small screens */
-}
-
-table {
-  width: 100%;
-  border-collapse: collapse;
-  text-align: center;
-  margin-top: 15px;
-  font-size: 13px;
-  min-width: 600px; /* prevents squishing */
-}
-
-th, td {
-  border: 1px solid #ccc;
-  padding: 6px;
-}
-
-th {
-  background-color: #e9eef5;
-}
-
-tr:nth-child(even) {
-  background-color: #f2f6fa;
-}
-
-input[type="checkbox"] {
-  width: 18px;
-  height: 18px;
-  cursor: pointer;
-}
-
-.center {
-  text-align: center;
 }
 
 /* ======== Form Styling ======== */
@@ -152,12 +115,12 @@ input[type="email"] {
 }
 .nav{
     background-color: #eef3fb;
-    flex-direction:initial;
+    flex-direction:column;
     color: white;
-    display: flex;
+    display:ruby;
     align-items: center;
     justify-content: space-between;
-    flex-direction: column;
+   
   padding: 15px 30px;
 border-radius: 30px;
 }
@@ -167,6 +130,43 @@ border-radius: 30px;
    flex-direction:initial;
    display:flex;
    gap: 25px;
+}
+
+/* ======== Table Responsive ======== */
+.table-container {
+  overflow-x: auto; /* scroll horizontal for small screens */
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+  margin-top: 15px;
+  font-size: 13px;
+  min-width: 600px; /* prevents squishing */
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 6px;
+}
+
+th {
+  background-color: #e9eef5;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f6fa;
+}
+
+input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+}
+
+.center {
+  text-align: center;
 }
 
 
@@ -189,4 +189,48 @@ font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans 
     font-size: 30px;
     font-weight: bold; 
     color: black;
+}
+
+
+/* ======== Exercise 6 + 7 Buttons ======== */
+.extra-btn {
+  padding: 10px 15px;
+  background-color: #4a6fa5;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  margin: 8px 5px;
+  transition: 0.3s ease;
+}
+
+.extra-btn:hover {
+  background-color: #3c5e8b;
+}
+
+/* Search Input */
+#searchName {
+  width: 100%;
+  max-width: 350px;
+  padding: 8px;
+  margin: 15px 0;
+  font-size: 14px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+/* Sort status message */
+#sortStatus {
+  margin-top: 15px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #2c3e50;
+  text-align: center;
+}
+
+/* Highlighted rows (animation colors) */
+.excellent {
+  background-color: lightgreen !important;
+  transition: background-color 0.5s ease;
 }
